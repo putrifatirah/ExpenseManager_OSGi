@@ -1,0 +1,9 @@
+#
+# com.example.expensetracker.api
+#
+
+-buildpath:  \
+	osgi.annotation
+Bundle-Name: Expense Tracker API
+Export-Package: com.example.expensetracker.api
+Bundle-Version: 1.0.0

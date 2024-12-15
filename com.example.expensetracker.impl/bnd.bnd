@@ -1,0 +1,70 @@
+#
+# com.example.expensetracker.impl PROVIDER BUNDLE
+#
+
+-buildpath: \
+	osgi.annotation,\
+	org.osgi.service.component.annotations,\
+	org.mongodb.driver-sync,\
+	org.mongodb.bson,\
+	com.example.expensetracker.api
+	
+Bundle-Version: 1.0.0
+Bundle-Name: Expense Tracker Implementation
+
+Import-Package: \
+	,\
+	*
+Private-Package: com.example.expensetracker.impl
+Export-Package: \
+	com.example.expensetracker.api,\
+	com.mongodb.client,\
+	com.mongodb,\
+	org.bson,\
+	com.example.expensetracker.impl,\
+	javax.annotation,\
+	org.bson.assertions,\
+	com.mongodb.client.vault,\
+	com.mongodb.client.internal,\
+	org.bson.codecs,\
+	org.bson.codecs.configuration,\
+	org.bson.conversions,\
+	org.bson.internal,\
+	org.bson.io,\
+	org.bson.types,\
+	com.mongodb.annotations,\
+	com.mongodb.assertions,\
+	com.mongodb.bulk,\
+	com.mongodb.client.cursor,\
+	com.mongodb.client.gridfs.model,\
+	com.mongodb.client.model,\
+	com.mongodb.client.model.changestream,\
+	com.mongodb.client.model.vault,\
+	com.mongodb.client.result,\
+	com.mongodb.connection,\
+	com.mongodb.crypt.capi,\
+	com.mongodb.event,\
+	com.mongodb.internal,\
+	com.mongodb.internal.binding,\
+	com.mongodb.internal.bulk,\
+	com.mongodb.internal.capi,\
+	com.mongodb.internal.client.model,\
+	com.mongodb.internal.client.model.changestream,\
+	com.mongodb.internal.client.vault,\
+	com.mongodb.internal.connection,\
+	com.mongodb.internal.crypt.capi,\
+	com.mongodb.internal.diagnostics.logging,\
+	com.mongodb.internal.event,\
+	com.mongodb.internal.function,\
+	com.mongodb.internal.operation,\
+	com.mongodb.internal.session,\
+	com.mongodb.internal.thread,\
+	com.mongodb.internal.time,\
+	com.mongodb.internal.validator,\
+	com.mongodb.lang,\
+	com.mongodb.session,\
+	org.bson.codecs.jsr310,\
+	org.bson.json,\
+	com.mongodb.spi.dns
+-runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
+-runee: JavaSE-17

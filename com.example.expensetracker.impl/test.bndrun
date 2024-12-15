@@ -1,0 +1,6 @@
+-runfw: org.apache.felix.framework;version='[7.0.5,7.0.5]'
+-runee: OSGi/Minimum-1.1
+-runrequires: \
+	bnd.identity;id='com.example.expensetracker.impl',\
+	bnd.identity;id='org.apache.felix.gogo.shell',\
+	bnd.identity;id='org.apache.felix.gogo.command'

@@ -1,0 +1,2 @@
+org.mongodb:mongodb-driver-sync:5.2.1
+org.mongodb:bson:5.2.1
