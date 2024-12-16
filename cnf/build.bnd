@@ -1,0 +1,15 @@
+
+Bundle-Version:             1.0.0.${tstamp}
+
+-remoteworkspace        true
+-runfw:                 org.apache.felix.framework
+-runee:                 JavaSE-17
+
+-plugin: aQute.bnd.repository.maven.provider.MavenBndRepository;\
+		name                ='Maven Repository';\
+		releaseUrl          ='https://repo.maven.apache.org/maven2/';\
+		snapshotUrl         ='https://repository.apache.org/snapshots/';\
+		local               ='~/.m2/repository';\
+		readOnly            =false;\
+		index               ="${.}/central.maven"; \
+		poll_time           =5

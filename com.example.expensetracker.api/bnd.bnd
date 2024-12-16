@@ -1,0 +1,10 @@
+#
+# com.example.expensetracker.api
+#
+
+-buildpath: \
+	osgi.annotation,\
+	org.mongodb.bson
+Bundle-Name: Expense Tracker API
+Export-Package: com.example.expensetracker.api
+Bundle-Version: 1.0.0
