@@ -10,9 +10,11 @@ import org.osgi.service.component.annotations.Reference;
     property = {
         CommandProcessor.COMMAND_SCOPE + "=expensetracker",
         CommandProcessor.COMMAND_FUNCTION + "=addExpense",
-        CommandProcessor.COMMAND_FUNCTION + "=editExpense"  // Adding the editExpense command
+        CommandProcessor.COMMAND_FUNCTION + "=editExpense",
+        CommandProcessor.COMMAND_FUNCTION + "=viewExpenses"  // Added the viewExpenses command    },
     },
-    service = ExpenseTrackerCommands.class
+        service = ExpenseTrackerCommands.class
+   
 )
 public class ExpenseTrackerCommands {
 
@@ -34,5 +36,13 @@ public class ExpenseTrackerCommands {
         Expense updatedExpense = new Expense(name, amount);
         expenseService.editExpense(id, updatedExpense);
         System.out.println("Expense with ID " + id + " updated to: " + updatedExpense.getName());
+    }
+    // New viewExpenses command
+    public void viewExpenses() {
+        System.out.println("\n--- Viewing All Expenses ---");
+        expenseService.viewExpenses().forEach(expense ->
+            System.out.println("ID: " + expense.getId() + ", Name: " + expense.getName() +
+                               ", Amount: " + expense.getAmount() + ", Date: " + expense.getDate())
+        );
     }
 }
