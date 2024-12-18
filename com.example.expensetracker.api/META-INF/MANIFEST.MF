@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Api
+Bundle-SymbolicName: com.example.expensetracker.api
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-23
+Automatic-Module-Name: com.example.expensetracker.api
+Export-Package: com.example.expensetracker.api;version="1.0.0"

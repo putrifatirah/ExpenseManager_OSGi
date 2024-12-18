@@ -1,5 +1,6 @@
 package com.example.expensetracker.api;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.Date;
@@ -52,17 +53,39 @@ public class Expense {
         this.amount = amount;
     }
 
-    public LocalDateTime getDate() {
-        return date;
+    // Updated getDate to return only the date part
+    public LocalDate getDate() {
+        return date.toLocalDate();  // Returns only the date part
     }
 
     public void setDate(LocalDateTime date) {
         this.date = date;
     }
 
-    // Converts LocalDate to java.util.Date (for MongoDB storage)
- // Converts LocalDateTime to java.util.Date (for MongoDB storage)
+    // Converts LocalDateTime to java.util.Date (for MongoDB storage)
     public Date getMongoDate() {
         return Date.from(date.atZone(ZoneId.systemDefault()).toInstant());  // Convert LocalDateTime to Date
     }
+    
+    @Override
+    public String toString() {
+        return String.format("Expense{id=%s, name='%s', amount=%.2f, date=%s}", 
+                id, name, amount, getDate());
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        Expense expense = (Expense) obj;
+        return Double.compare(expense.amount, amount) == 0 &&
+               name.equals(expense.name) &&
+               date.toLocalDate().equals(expense.date.toLocalDate());
+    }
+
+    @Override
+    public int hashCode() {
+        return id != null ? id.hashCode() : 0;
+    }
+    
 }

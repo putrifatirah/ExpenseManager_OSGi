@@ -12,5 +12,8 @@
 			<attribute name="test" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry kind="lib" path="C:/Users/USER/Downloads/slf4j-simple-1.7.36.jar"/>
+	<classpathentry kind="lib" path="C:/Users/USER/Downloads/slf4j-api-1.7.36.jar"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
