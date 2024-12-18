@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Impl
+Bundle-SymbolicName: com.example.expensetracker.impl
+Bundle-Version: 1.0.0.qualifier
+Bundle-ClassPath: impl.jar,
+ USER/Downloads/slf4j-simple-1.7.36.jar,
+ USER/Downloads/slf4j-api-1.7.36.jar
+Automatic-Module-Name: com.example.expensetracker.impl
+Bundle-RequiredExecutionEnvironment: JavaSE-23
+Import-Package: org.slf4j
+Export-Package: com.example.expensetracker.api,
+ com.example.expensetracker.impl;version="1.0.0"
